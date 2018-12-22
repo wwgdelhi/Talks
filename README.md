@@ -7,7 +7,7 @@ To propose a talk, simply create a Github issue [here](https://github.com/wwgdel
 ## 2019
 
 
-[Women Who Go Delhi]: https://github.com/wwgdelhi
+[Women Who Go Delhi]: https://www.meetup.com/New-Delhi-Women-Who-Go/
 [Talks]: https://github.com/wwgdelhi/talks
 
 ---
