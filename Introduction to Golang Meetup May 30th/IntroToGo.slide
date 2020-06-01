@@ -1,1 +1,216 @@
+Go 101
+
+30 May 2020
+
+# Go is a general-purpose language that bridges the gap between efficient
+# statically typed languages and productive dynamic language. But it’s not just
+# the language that makes Go special – Go has broad and consistent standard
+# libraries and powerful but simple tools.
+# 
+# This talk gives an introduction to Go, followed by a tour of some real
+# programs that demonstrate the power, scope, and simplicity of the Go
+# programming environment.
+
+Rashmi Nagpal
+@iamrashminagpal
+
+* Agenda
+- Introduction to Go
+- Tour to real programs
+- Power, simplicity and scope of Go programming environment
+
+* Background
+
+* Why a new language?
+
+We need:
+
+- Efficiency
+- Safety
+- Concurrency
+- Scalability
+- Fast development cycle
+- No surprises
+- A cute mascot
+
+* Why Go
+
+Go is an answer to problems at scale.
+
+System Scale
+
+- designed to scale to 10⁶⁺ machines
+- jobs coordinate, interact with others in the system
+
+Solution : Concurrency in built principle
+Go is:
+
+- Lightweight, avoids unnecessary repetition
+- Object Oriented, but not in the usual way
+- Concurrent
+
+* Comparing Go and other languages
+
+* Go has much in common with Java
+
+- C family (imperative, braces)
+- Statically typed
+- Garbage collected
+- Memory safe (nil references, runtime bounds checks)
+- Variables are always initialized (zero/nil/false)
+- Methods
+- Interfaces
+
+* Go differs from Java in several ways
+
+Fast, efficient for computers:
+
+- Programs compile to machine code. There's no VM.
+- Control over memory layout, fewer indirections
+
+Fun, fast for humans:
+
+- Simple, concise syntax
+- Statically linked binaries
+- Function values and lexical closures
+- Built-in strings (UTF-8)
+- Built-in generic maps and arrays/slices
+- Built-in concurrency
+
+* For more background on design:
+
+- [[http://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html][Less is exponentially more (Pike, 2012)]]
+- [[http://talks.golang.org/2012/splash.article][Go at Google: Language Design in the Service of Software Engineering (Pike, 2012)]]
+
+* Code examples
+
+.play -edit HelloWorld.go
+
+* Values
+Go has various value types including strings, integers, floats, booleans, etc. Here are a few basic examples.
+
+.play -edit Values.go
+
+* Variables
+
+.play -edit Variables.go
+
+* Constants
+
+.play -edit constants.go
+
+* Loop
+
+* for
+
+.play -edit loop-for.go
+
+* if-else
+
+.play -edit loop-if-else.go
+
+* Arrays
+
+.play -edit arrays.go
+
+* Maps
+
+.play -edit maps.go
+
+* Range
+
+.play -edit range.go
+
+* Function
+
+.play -edit function.go
+
+* Multi Return Values
+
+.play -edit multi-return-values.go
+
+
+* Recursion 
+
+.play -edit recursion.go
+
+* Struct
+
+.play -edit struct.go
+
+* Interface
+
+.play interface.go
+
+
+* Goroutine
+
+.play goroutine.go
+
+* Channels
+
+.play channels.go
+
+* Standard library
+
+* Packages
+
+Go code lives in packages.
+
+Packages contain type, function, variable, and constant declarations.
+
+Packages can be very small (package `errors` has just one declaration) or very large (package `net/http` has >100 declarations). Most are somewhere in between.
+
+* io
+
+The `io` package provides fundamental I/O interfaces that are used throughout most Go code.
+
+The most ubiquitous are the `Reader` and `Writer` types, which describe streams of data.
+
+
+`Reader` and `Writer` implementations include files, sockets, (de)compressors, image and JSON codecs, and many more.
+
+* net/http
+
+The `net/http` package implements an HTTP server and client.
+
+
+* Tools
+
+* The go tool
+
+The `go` tool is the de facto standard for building and installing Go code.
+
+Compile and run a single-file program:
+
+	$ go run hello.go
+
+Build and install the package in the current directory (and its dependencies):
+
+	$ go install
+
+Build and install the `fmt` package (and its dependencies):
+
+	$ go install fmt
+
+This tool also acts as an interface for most of the Go tools.
+
+* Gofmt
+
+The `gofmt` tool is a pretty-printer for Go source code.
+
+Improves readability. Improves writability.
+
+Saves a _huge_ amount of time.
+
+* Tests: writing
+
+The `go` tool and the `testing` package provide a lightweight test framework.
+
+
+* Further reading
+
+All about Go:
+
+.link http://golang.org
 
